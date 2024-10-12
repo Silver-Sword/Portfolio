@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { User, Users } from 'lucide-react'
+import { User, Users, Github, Linkedin, Mail } from 'lucide-react'
 import { getFeaturedProjects } from './projectPreviews';
 
 const projects = getFeaturedProjects();
@@ -26,9 +26,15 @@ export default function Home() {
         <h1 className="text-5xl font-bold mb-4">Chris Gittings</h1>
         <p className="text-2xl text-muted-foreground mb-6">Software Developer</p>
         <div className="flex justify-center space-x-4">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">LinkedIn</a>
-          <a href="mailto:john@example.com" className="text-primary hover:underline">Email</a>
+        <a href="https://github.com/Silver-Sword" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
+            <Github className="h-8 w-8" aria-label="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/chris4/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
+            <Linkedin className="h-8 w-8" aria-label="LinkedIn" />
+          </a>
+          <a href="mailto:chrisgittingsucf@gmail.com" className="text-gray-600 hover:text-gray-900">
+            <Mail className="h-8 w-8" aria-label="Email" />
+          </a>
         </div>
       </section>
 
