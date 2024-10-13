@@ -89,7 +89,17 @@ export const PROJECTS: Project[] = [
         skills: ['C++', 'Java', 'Algorithms', 'Data Structures'],
         isTeamProject: false,
         isFeatured: false, 
-    }
+    },
+    {
+        id: 9,
+        title: 'Personal Portfolio Website',
+        type: 'Web App',
+        description: 'The very website you are viewing. A personal portfolio website to showcase my work and highlights.',
+        image: '/portfolio.jpg',
+        skills: ['React', 'Next.js', 'Tailwind CSS'],
+        isTeamProject: false,
+        isFeatured: false,
+    },
 ];
 
 export function getFeaturedProjects(): Project[] {
