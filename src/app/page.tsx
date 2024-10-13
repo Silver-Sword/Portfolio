@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { User, Users, Github, Linkedin, Mail } from 'lucide-react'
-import { getFeaturedProjects } from './projectPreviews';
+import { getFeaturedProjects } from './projects/projectPreviews';
 
 const projects = getFeaturedProjects();
 

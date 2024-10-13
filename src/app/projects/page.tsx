@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { User, Users } from 'lucide-react'
 import Link from 'next/link';
 
-import { PROJECTS } from '../projectPreviews';
+import { PROJECTS } from './projectPreviews';
 
 const projects = PROJECTS;
 
