@@ -53,7 +53,7 @@ export default function Home() {
         <h2 className="text-3xl font-semibold mb-6 text-center">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <Link key={project.id} href={`/projects/${project.id}`} className="block group">
+            <Link key={project.id} href={`/projects/`} className="block group">
               <div className="border rounded-lg overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-lg">
                 <Image
                   src={project.image}

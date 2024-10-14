@@ -18,7 +18,7 @@ export default function Projects() {
           <div key={project.id} className="border rounded-lg overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
             <Image
               src={project.image}
-              alt={project.title}
+              alt={project.alt}
               width={300}
               height={200}
               className="w-full h-48 object-cover"
