@@ -85,8 +85,22 @@ export default function About() {
       <h2 className="text-3xl font-semibold mb-4">About Me</h2>
         <p className="text-lg">
           Hi there! Welcome to my Portfolio! I'm a passionate software engineer with a love problem solving and learning. 
+          I specialize in backend development and advanced knowledge of algorithms and data structures. I also have a 
+          blossoming love for indie game development.
+
+          <br/><br/>
+
+          As a software engineer, I've interned at Statsig and Lockheed Martin.
+          I have also been on my University's competitive programming team for
+          the past four years and have competed in the ACM ICPC Southeast USA regional competition 
+          as well as online on sites like Codeforces and CodeChef.
+
+          <br/><br/>
+          
           I am about to graduate with a degree in Computer Science and I'm excited to apply my skills to real-world problems. 
           When I'm not coding, you can find me exploring new technologies, playing video games, or diving into a good book.
+
+          <br/><br/>
         </p>
       </section>
 

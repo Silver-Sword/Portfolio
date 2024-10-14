@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { User, Users, Github, Linkedin, Mail } from 'lucide-react'
-import { getFeaturedProjects } from './projectPreviews';
+import { getFeaturedProjects } from './projects/projectPreviews';
 
 const projects = getFeaturedProjects();
 
@@ -41,11 +41,9 @@ export default function Home() {
       <section id="about">
         <h2 className="text-3xl font-semibold mb-6 text-center">About Me</h2>
         <p className="max-w-2xl mx-auto text-center text-lg">
-          Hi 👋 I'm Chris. I am a software engineer pursuing a Bachelor's in Computer Science at 
-          the University of Central Florida graduating in December 2024.
-          With a passion for backend development, I've interned at Statsig and Lockheed Martin.
-          I'm driven by a love of learning and problem solving, and I'm always eager to tackle new and challenging problems.
-          Let's build something amazing together!
+          Hi 👋 I'm Chris. I am a competitive programmer and software engineer pursuing a Bachelor's in Computer Science at 
+          the University of Central Florida graduating in December 2024. 
+          I am drawn towards backend development and indie game development.
         </p>
       </section>
 
@@ -53,7 +51,7 @@ export default function Home() {
         <h2 className="text-3xl font-semibold mb-6 text-center">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <Link key={project.id} href={`/projects/${project.id}`} className="block group">
+            <Link key={project.id} href={`/projects/`} className="block group">
               <div className="border rounded-lg overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-lg">
                 <Image
                   src={project.image}
