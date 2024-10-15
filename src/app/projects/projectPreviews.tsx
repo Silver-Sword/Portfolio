@@ -113,15 +113,26 @@ export const PROJECTS: Project[] = [
     {
         id: 10,
         title: 'Privacy-Conscious Fall Dectection Machine Learning Research',
-        type: 'Research Paper',
-        description: 'A research paper on detecting fallen people in static images using machine learning and Python.',
+        type: 'Research Poster',
+        description: 'A research poster on detecting fallen people in static images using machine learning and Python.',
         image: '/fallen-person.jpg',
-        alt: 'A person laying on the ground with a red box around them.',
+        alt: 'Several clipart images of older individuals in various stages of falling.',
         skills: ['Python', 'Machine Learning', 'Computer Vision'],
         isTeamProject: false,
         isFeatured: false,
 
         // link: https://iotreu.cs.ucf.edu/wp-content/uploads/2023/05/Gittings_Chris_REU_Poster_Sum22.pdf
+    },
+    {
+        id: 11,
+        title: 'Dynamic Connectivity Paper',
+        type: 'Research Paper',
+        description: 'A exploratory paper on Dynamic Connectivity, a data structure used in graph theory.',
+        image: '/dynamic-connectivity-image.png',
+        alt: 'A artistically rendered graph.',
+        skills: ['C++', 'Data Structures', 'Algorithms'],
+        isTeamProject: false,
+        isFeatured: false,
     }
 ];
 
