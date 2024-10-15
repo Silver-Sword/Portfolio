@@ -110,6 +110,19 @@ export const PROJECTS: Project[] = [
         isTeamProject: false,
         isFeatured: false,
     },
+    {
+        id: 10,
+        title: 'Privacy-Conscious Fall Dectection Machine Learning Research',
+        type: 'Research Paper',
+        description: 'A research paper on detecting fallen people in static images using machine learning and Python.',
+        image: '/fallen-person.jpg',
+        alt: 'A person laying on the ground with a red box around them.',
+        skills: ['Python', 'Machine Learning', 'Computer Vision'],
+        isTeamProject: false,
+        isFeatured: false,
+
+        // link: https://iotreu.cs.ucf.edu/wp-content/uploads/2023/05/Gittings_Chris_REU_Poster_Sum22.pdf
+    }
 ];
 
 export function getFeaturedProjects(): Project[] {
