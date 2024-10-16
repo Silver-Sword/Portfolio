@@ -70,6 +70,15 @@ export default function About() {
             "Developed image classification in Python with >95% accuracy using algorithms like ResNet and VGG19",
         ]
       },
+      {
+        date: "Jun 2021 - Oct 2021",
+        title: "Software Development Freelancer",
+        company: "Upwork and Parker Dewey",
+        description: [
+            "Created a Visual Basic application to automate PowerPoint to .mp4 conversions",
+            "Designed a Google Sheet dashboard to automate filtering data using fluctuating criteria"
+        ]
+      },
       { 
         date: "May 2018 - Aug 2019 (Seasonal)", 
         title: "Software Engineering Intern", 
