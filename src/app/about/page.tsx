@@ -50,6 +50,16 @@ export default function About() {
             "Solved 1000+ problems using Java and C++ with an average program length of 100-200 lines",
         ]
       },
+      {
+        date: "May 2023 - Jul 2023",
+        title: "Teaching Assistant",
+        company: "University of Central Florida",
+        description: [
+            "Lectured on data structures and competitive programming problem solutions",
+            "Supported students in fixing and improving their competitive programming solutions",
+            "Collaborated on creating problems and data for contest problems with other Teaching Assistants"
+        ]
+      },
       { 
         date: "May 2022 - Jul 2022", 
         title: "Machine Learning Researcher", 
@@ -58,6 +68,15 @@ export default function About() {
             "Investigated computer vision and machine learning algorithms for detecting fallen people in static images",
             "Collected an image database of 30,000+ images using Google scraping tools",
             "Developed image classification in Python with >95% accuracy using algorithms like ResNet and VGG19",
+        ]
+      },
+      {
+        date: "Jun 2021 - Oct 2021",
+        title: "Software Development Freelancer",
+        company: "Upwork and Parker Dewey",
+        description: [
+            "Created a Visual Basic application to automate PowerPoint to .mp4 conversions",
+            "Designed a Google Sheet dashboard to automate filtering data using fluctuating criteria"
         ]
       },
       { 
