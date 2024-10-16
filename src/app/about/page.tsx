@@ -50,6 +50,16 @@ export default function About() {
             "Solved 1000+ problems using Java and C++ with an average program length of 100-200 lines",
         ]
       },
+      {
+        date: "May 2023 - Jul 2023",
+        title: "Teaching Assistant",
+        company: "University of Central Florida",
+        description: [
+            "Lectured on data structures and competitive programming problem solutions",
+            "Supported students in fixing and improving their competitive programming solutions",
+            "Collaborated on creating problems and data for contest problems with other Teaching Assistants"
+        ]
+      },
       { 
         date: "May 2022 - Jul 2022", 
         title: "Machine Learning Researcher", 
