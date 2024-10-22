@@ -167,7 +167,9 @@ export default function About() {
           {Object.entries(favorites).map(([category, items]) => (
             <Card key={category}>
               <CardHeader>
-                <CardTitle className="capitalize">{category}</CardTitle>
+                <CardTitle className="capitalize">
+                  {category === 'algorithms' ? 'Algorithms and Data Structures' : category}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ol className="list-decimal list-inside">

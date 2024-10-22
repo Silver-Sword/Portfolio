@@ -64,7 +64,7 @@ export default function RootLayout({
           <main className="flex-grow container mx-auto px-6 py-8">
             {children}
           </main>
-          <footer className="bg-primary text-primary-foreground mt-8">
+          <footer className="text-primary-foreground mt-8">
             <div className="container mx-auto px-6 py-6 text-center">
             <span className="text-gray-400">© 2024 Chris Gittings. All rights reserved.</span>
             </div>
