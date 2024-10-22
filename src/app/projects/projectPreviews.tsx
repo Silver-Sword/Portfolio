@@ -133,6 +133,17 @@ export const PROJECTS: Project[] = [
         skills: ['C++', 'Data Structures', 'Algorithms'],
         isTeamProject: false,
         isFeatured: false,
+    },
+    {
+        id: 12,
+        title: 'Splay Tree and Link Cut Tree Paper',
+        type: 'Research Paper',
+        description: 'A research paper on Splay Trees and Link Cut Trees, two data structures used in graph theory.',
+        image: '/tree.jpg',
+        alt: 'A tree',
+        skills: ['C++', 'Data Structures', 'Algorithms'],
+        isTeamProject: false,
+        isFeatured: false,
     }
 ];
 
