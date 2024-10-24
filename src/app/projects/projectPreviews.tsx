@@ -1,16 +1,6 @@
-type Project = {
-    id: number,
-    title: string,
-    description: string,
-    type: string,
-    image: string,
-    alt: string,
-    skills: string[],
-    isTeamProject: boolean,
-    isFeatured: boolean,
-};
+import { ProjectProperties } from "./ProjectProperties";
 
-export const PROJECTS: Project[] = [
+export const PROJECTS: ProjectProperties[] = [
     { 
       id: 1, 
       title: 'Tune Tracer', 
@@ -21,6 +11,9 @@ export const PROJECTS: Project[] = [
       skills: ['TypeScript', 'Firebase', 'Jira'],
       isTeamProject: true,
       isFeatured: true,
+      links: {
+        github: 'https://github.com/Silver-Sword/Tune-Tracer',
+      }
     },
     { 
       id: 2, 
@@ -32,6 +25,10 @@ export const PROJECTS: Project[] = [
       skills: ['C#', 'Unity', 'Jira'],
       isTeamProject: true,
       isFeatured: true,
+      links: {
+        github: 'https://github.com/kaedenle/CAP4053--Subliminal',
+        youtube: 'https://youtu.be/y8J5yYUdjnU?si=VhVZxYEI34tQrfp5&t=8484',
+      }
     },
     { 
       id: 3, 
@@ -43,6 +40,10 @@ export const PROJECTS: Project[] = [
       skills: ['TypeScript', 'Firebase', 'Thunder Client'],
       isTeamProject: true,
       isFeatured: true,
+      links: {
+        github: 'https://github.com/arundeegutla/shellhacks2024',
+        site: 'shellhacks24.web.app/',
+      }
     },
     {
         id: 4,
@@ -54,6 +55,9 @@ export const PROJECTS: Project[] = [
         skills: ['React Native', 'JavaScript', 'Jira'],
         isTeamProject: false,
         isFeatured: false,
+        links: {
+            github: 'https://github.com/Silver-Sword/MegaBites',
+        }
     },
     {
         id: 5, 
@@ -65,6 +69,9 @@ export const PROJECTS: Project[] = [
         skills: ['Python', 'Research', 'Quantum Computing'],
         isTeamProject: false,
         isFeatured: false,
+        links: {
+            paper: 'https://drive.google.com/file/d/1T2LSIi4lhwbD7ztjSyHlBxFoXOqN81OD/view?usp=drive_link',
+        }
     },
     {
         id: 6,
@@ -76,6 +83,9 @@ export const PROJECTS: Project[] = [
         skills: ['Python', 'LaTeX', 'Research'],
         isTeamProject: false,
         isFeatured: false,
+        links: {
+            paper: 'https://drive.google.com/file/d/1zyQd2kivcRPiF9otlUeA7JjVKVCWUkym/view?usp=sharing',
+        }
     },
     {
         id: 7,
@@ -87,6 +97,9 @@ export const PROJECTS: Project[] = [
         skills: ['Java', 'Eclipse', 'Github'],
         isTeamProject: false,
         isFeatured: false,
+        links: {
+            github: 'https://github.com/Silver-Sword/Alchemy',
+        }
     },
     {
         id: 8,
@@ -98,6 +111,9 @@ export const PROJECTS: Project[] = [
         skills: ['C++', 'Java', 'Algorithms', 'Data Structures'],
         isTeamProject: false,
         isFeatured: false, 
+        links: {
+            github: 'https://github.com/Silver-Sword/Competitive-Programming-Samples',
+        }
     },
     {
         id: 9,
@@ -109,6 +125,10 @@ export const PROJECTS: Project[] = [
         skills: ['React', 'Next.js', 'Tailwind CSS'],
         isTeamProject: false,
         isFeatured: false,
+        links: {
+            github: 'https://github.com/Silver-Sword/Silver-Sword.github.io',
+            site: 'https://silver-sword.github.io/',
+        }
     },
     {
         id: 10,
@@ -120,8 +140,9 @@ export const PROJECTS: Project[] = [
         skills: ['Python', 'Machine Learning', 'Computer Vision'],
         isTeamProject: false,
         isFeatured: false,
-
-        // link: https://iotreu.cs.ucf.edu/wp-content/uploads/2023/05/Gittings_Chris_REU_Poster_Sum22.pdf
+        links: {
+            site: 'https://iotreu.cs.ucf.edu/wp-content/uploads/2023/05/Gittings_Chris_REU_Poster_Sum22.pdf'
+        }
     },
     {
         id: 11,
@@ -133,6 +154,9 @@ export const PROJECTS: Project[] = [
         skills: ['C++', 'Data Structures', 'Algorithms'],
         isTeamProject: false,
         isFeatured: false,
+        links: {
+            paper: 'https://drive.google.com/file/d/1HASUOMZgv2qnuIYckaLrlmD8RH_dc5SG/view?usp=sharing',
+        }
     },
     {
         id: 12,
@@ -144,9 +168,12 @@ export const PROJECTS: Project[] = [
         skills: ['C++', 'Data Structures', 'Algorithms'],
         isTeamProject: false,
         isFeatured: false,
+        links: {
+            paper: 'https://drive.google.com/file/d/1CT5CMdqIiQxkxC3VmARE5qlg90l7X48N/view?usp=sharing',
+        }
     }
 ];
 
-export function getFeaturedProjects(): Project[] {
+export function getFeaturedProjects(): ProjectProperties[] {
     return PROJECTS.filter(project => project.isFeatured);
 }
