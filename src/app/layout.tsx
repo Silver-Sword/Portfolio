@@ -4,7 +4,7 @@ import './globals.css'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-const INCLUDE_BLOGS = false;
+const INCLUDE_BLOGS = true;
 const metadata = {
   title: 'Chris Gittings | Software Developer',
   description: 'Portfolio of Chris Gittings, a new grad software developer showcasing projects and blog posts',

@@ -1,17 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { User, Users, Github, Linkedin, Mail } from 'lucide-react'
-import { getFeaturedProjects } from './projects/projectPreviews';
+import { Github, Linkedin, Mail } from 'lucide-react'
 import { ProjectCard } from '@/components/ProjectCard';
+import { BlogCard } from '@/components/BlogCard';
+
+import { getFeaturedProjects } from './projects/projectPreviews';
+import { getFeaturedPosts } from './blog/blogPreviews';
 
 const projects = getFeaturedProjects();
 
-const INCLUDE_BLOGS = false;
-const blogPosts = [
-  { id: 1, title: 'Blog Post 1', description: 'Short description of Blog Post 1', image: '/placeholder.svg?height=200&width=300' },
-  { id: 2, title: 'Blog Post 2', description: 'Short description of Blog Post 2', image: '/placeholder.svg?height=200&width=300' },
-  { id: 3, title: 'Blog Post 3', description: 'Short description of Blog Post 3', image: '/placeholder.svg?height=200&width=300' },
-]
+const INCLUDE_BLOGS = true;
+const blogPosts = getFeaturedPosts();
 
 export default function Home() {
   return (
@@ -64,21 +63,7 @@ export default function Home() {
         <h2 className="text-3xl font-semibold mb-6 text-center">Latest Blog Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <Link key={post.id} href={`/blog/${post.id}`} className="block group">
-              <div className="border rounded-lg overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-lg">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  width={300}
-                  height={200}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                  <p className="text-muted-foreground">{post.description}</p>
-                </div>
-              </div>
-            </Link>
+            <BlogCard key={post.id} {...post} />
           ))}
         </div>
         <div className="mt-8 text-center">
