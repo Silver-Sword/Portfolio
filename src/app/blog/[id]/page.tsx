@@ -1,6 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
+
 import { POSTS } from "@/app/blog/blogPreviews";
 
 const blogPosts = POSTS;
@@ -32,18 +36,16 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
     notFound();
   }
 
+  const filePath = path.join(process.cwd(), `${post.src}`);
+  const fileContents = fs.readFileSync(filePath, "utf8");
+  const { data, content } = matter(fileContents);
+
   return (
     <article className="max-w-2xl mx-auto py-8">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      <div className="prose lg:prose-xl">
-        <Image
-          src={post.image}
-          alt={post.title}
-          width={800}
-          height={400}
-          className="rounded-lg"
-        />
-        <p>{post.content}</p>
+      <p className="text-gray-500 mb-4">{post.date_written}</p>
+      <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none dark:prose-invert">
+        <ReactMarkdown>{content}</ReactMarkdown>
       </div>
     </article>
   );

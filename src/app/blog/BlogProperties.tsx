@@ -4,6 +4,8 @@ export type BlogProperties = {
   description: string;
   image: string;
   alt: string;
+  src: string;
   skills: string[];
   isFeatured: boolean;
+  date_written: string;
 };
