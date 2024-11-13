@@ -4,11 +4,13 @@ export const POSTS: BlogProperties[] = [
   {
     id: "0_hello_world",
     title: "Hello, world!",
+    date_written: "November 11, 2024",
     description: "My very first blog post",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/blog-images/hello_world.png",
     alt: "First blog post",
     skills: [],
     isFeatured: true,
+    src: "/blog-posts/helloWorld.md",
   },
 ];
 
