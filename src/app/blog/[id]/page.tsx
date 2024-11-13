@@ -5,13 +5,13 @@ import { POSTS } from "@/app/blog/blogPreviews";
 
 const blogPosts = POSTS;
 
-const text = {  
-    '1': {
-        date: "November 5, 2024",
-        content:
-        "This is my first blog post as a new grad software engineer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+const text = {
+  "1": {
+    date: "November 5, 2024",
+    content:
+      "This is my first blog post as a new grad software engineer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
-}
+};
 
 // This function generates the static paths for all blog posts
 export async function generateStaticParams() {
@@ -42,9 +42,9 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
           width={800}
           height={400}
           className="rounded-lg"
-          />
+        />
         <p>{post.content}</p>
       </div>
     </article>
-  )
+  );
 }
