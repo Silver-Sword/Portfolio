@@ -1,9 +1,5 @@
 'use client'
 
-import Image from 'next/image'
-import { User, Users } from 'lucide-react'
-import Link from 'next/link';
-
 import { PROJECTS } from './projectPreviews';
 import { ProjectCard } from '@/components/ProjectCard';
 
