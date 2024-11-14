@@ -7,7 +7,7 @@ export const PROJECTS: ProjectProperties[] = [
     type: "Web App",
     description:
       "A Google Docs style composition tool. Make music with collaborators in real-time.",
-    image: "/project-images/tune-tracer-logo-small.png",
+    image: "/project-images/tune-tracer-playback.png",
     alt: "Tune Tracer Logo: The music notation for an eighth rest.",
     skills: ["TypeScript", "Firebase", "Jira"],
     isTeamProject: true,
