@@ -1,85 +1,56 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import FavoriteCard from "./FavoriteCard";
+import { favorites } from "./favorites";
+
 export default function FavoriteSection() {
-  const favorites = {
-    games: [
-      {
-        name: "Portal 2",
-        link: "https://store.steampowered.com/app/620/Portal_2/",
-      },
-      {
-        name: "Stanley Parable",
-        link: "https://store.steampowered.com/app/221910/The_Stanley_Parable/",
-      },
-      {
-        name: "Noita",
-        link: "https://store.steampowered.com/app/881100/Noita/",
-      },
-      {
-        name: "Control",
-        link: "https://store.steampowered.com/app/870780/Control_Ultimate_Edition/",
-      },
-      {
-        name: "Antichamber",
-        link: "https://store.steampowered.com/app/219890/Antichamber/",
-      },
-    ],
-    books: [
-      {
-        name: "Mother of Learning",
-        link: "https://www.royalroad.com/fiction/21220/mother-of-learning",
-      },
-      {
-        name: "Bobiverse Series",
-        link: "https://www.goodreads.com/series/192752-bobiverse",
-      },
-      {
-        name: "The Murderbot Diaries Series",
-        link: "https://www.goodreads.com/series/191900-the-murderbot-diaries",
-      },
-      {
-        name: "Cradle Series",
-        link: "https://www.goodreads.com/series/192821-cradle",
-      },
-      {
-        name: "Ready Player One",
-        link: "https://www.goodreads.com/book/show/9969571-ready-player-one",
-      },
-    ],
-    algorithms: [
-      { name: "Tries", link: "https://en.wikipedia.org/wiki/Trie" },
-      {
-        name: "Segment Trees",
-        link: "https://en.wikipedia.org/wiki/Segment_tree",
-      },
-      {
-        name: "Heavy-Light Decomposition (HLD)",
-        link: "https://cp-algorithms.com/graph/hld.html",
-      },
-      {
-        name: "Aho Corasick",
-        link: "https://cp-algorithms.com/string/aho_corasick.html",
-      },
-      {
-        name: "Dynamic Connectivity",
-        link: "https://en.wikipedia.org/wiki/Dynamic_connectivity",
-      },
-    ],
-  };
+  const [columnWidth, setColumnWidth] = useState(300);
+
+  useEffect(() => {
+    const updateColumnWidth = () => {
+      if (window.innerWidth < 640) {
+        setColumnWidth(window.innerWidth - 32); // Full width minus padding
+      } else {
+        setColumnWidth(300); // Default column width
+      }
+    };
+
+    updateColumnWidth();
+    window.addEventListener("resize", updateColumnWidth);
+    return () => window.removeEventListener("resize", updateColumnWidth);
+  }, []);
+
+  const allItems = Object.entries(favorites).flatMap(([category, items]) =>
+    items.map((item) => ({ ...item, category }))
+  );
 
   return (
-    <section>
-      <h2 className="text-3xl font-semibold mb-4">My Favorites</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {Object.entries(favorites).map(([category, items]) =>
-          items.map((item, index) => (
+    <section className="container mx-auto px-4">
+      <h2 className="text-3xl font-semibold mb-8">My Favorites</h2>
+
+      <div
+        className="grid gap-4"
+        style={{
+          gridTemplateColumns: `repeat(auto-fill, minmax(${columnWidth}px, 1fr))`,
+          gridAutoRows: "10px",
+        }}
+      >
+        {allItems.map((item, index) => (
+          <div
+            key={index}
+            className="break-inside-avoid"
+            style={{ gridRowEnd: `span ${Math.floor(item.height * 10)}` }}
+          >
             <FavoriteCard
-              key={index}
-              category={category}
+              category={item.category}
               name={item.name}
               link={item.link}
+              height={item.height}
+              image_url={(item as any).image_url ?? undefined}
             />
-          ))
-        )}
+          </div>
+        ))}
       </div>
     </section>
   );
