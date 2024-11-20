@@ -9,7 +9,7 @@ export const PROJECTS: ProjectProperties[] = [
       "A Google Docs style composition tool. Make music with collaborators in real-time.",
     image: "/project-images/tune-tracer-playback.png",
     alt: "Tune Tracer Logo: The music notation for an eighth rest.",
-    skills: ["TypeScript", "Firebase", "Jira"],
+    skills: ["TypeScript", "Firebase", "React", "Mantine", "Google Cloud"],
     isTeamProject: true,
     isFeatured: true,
     links: {
@@ -24,7 +24,7 @@ export const PROJECTS: ProjectProperties[] = [
       "RPG video game blending point and click adventures with fast paced combat.",
     image: "/project-images/subliminal-sample-3.png",
     alt: "A screenshot from Subliminal of the main character attacking a slime creature.",
-    skills: ["C#", "Unity", "Jira"],
+    skills: ["C#", "Unity", "Jira", "Project Management"],
     isTeamProject: true,
     isFeatured: true,
     links: {
@@ -132,7 +132,7 @@ export const PROJECTS: ProjectProperties[] = [
       "The very website you are viewing. A personal portfolio website to showcase my work and highlights.",
     image: "/project-images/portfolio.jpg",
     alt: "A colorful portfolio container.",
-    skills: ["React", "Next.js", "Tailwind CSS"],
+    skills: ["React", "Next.js", "Tailwind CSS", "Github Pages"],
     isTeamProject: false,
     isFeatured: false,
     links: {
