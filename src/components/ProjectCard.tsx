@@ -52,6 +52,7 @@ export function ProjectCard({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 transition-transform hover:scale-110"
+                title={`GitHub Repository - ${title}`}
               >
                 <Github className="h-5 w-5" aria-label="GitHub Repository" />
               </a>
@@ -62,6 +63,7 @@ export function ProjectCard({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 transition-transform hover:scale-110"
+                title={`YouTube Demo - ${title}`}
               >
                 <Youtube className="h-5 w-5" aria-label="YouTube Demo" />
               </a>
@@ -72,6 +74,7 @@ export function ProjectCard({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 transition-transform hover:scale-110"
+                title={`Research Paper - ${title}`}
               >
                 <FileText className="h-5 w-5" aria-label="Research Paper" />
               </a>
@@ -82,6 +85,7 @@ export function ProjectCard({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 transition-transform hover:scale-110"
+                title={`Project Website - ${title}`}
               >
                 <Globe className="h-5 w-5" aria-label="Project Website" />
               </a>
