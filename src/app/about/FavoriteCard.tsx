@@ -48,6 +48,7 @@ export default function FavoriteCard({
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-primary/80"
+              title={`Check out ${name}`}
             >
               <ExternalLink className="h-4 w-4" />
               <span className="sr-only">Visit {name}</span>
