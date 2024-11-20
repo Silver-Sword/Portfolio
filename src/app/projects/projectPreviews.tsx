@@ -49,6 +49,57 @@ export const PROJECTS: ProjectProperties[] = [
     },
   },
   {
+    id: 8,
+    title: "Competitive Programming Training",
+    type: "Collection of Solutions",
+    description:
+      "A collection of solutions to competitive programming problems from Codeforces and other similar sites.",
+    image: "/project-images/programming.webp",
+    alt: "A black screen with vertical lines of green numbers and letters",
+    skills: ["C++", "Java", "Algorithms", "Data Structures"],
+    isTeamProject: false,
+    isFeatured: false,
+    links: {
+      github: "https://github.com/Silver-Sword/Competitive-Programming-Samples",
+    },
+  },
+  {
+    id: 11,
+    title: "Dynamic Connectivity Paper",
+    type: "Research Paper",
+    description:
+      "A exploratory paper on Dynamic Connectivity, a data structure used in graph theory.",
+    image: "/project-images/dynamic-connectivity-image.png",
+    alt: "A artistically rendered graph.",
+    skills: ["C++", "Data Structures", "Algorithms"],
+    isTeamProject: false,
+    isFeatured: false,
+    links: {
+      paper:
+        "https://drive.google.com/file/d/1HASUOMZgv2qnuIYckaLrlmD8RH_dc5SG/view?usp=sharing",
+    },
+  },
+  {
+    id: 10,
+    title: "Privacy-Conscious Fall Dectection Machine Learning Research",
+    type: "Research Poster",
+    description:
+      "A research poster on detecting fallen people in static images using machine learning and Python.",
+    image: "/project-images/fallen-person.jpg",
+    alt: "Several clipart images of older individuals in various stages of falling.",
+    skills: [
+      "Python",
+      "Machine Learning",
+      "Computer Vision",
+      "Image Classification",
+    ],
+    isTeamProject: false,
+    isFeatured: false,
+    links: {
+      site: "https://iotreu.cs.ucf.edu/wp-content/uploads/2023/05/Gittings_Chris_REU_Poster_Sum22.pdf",
+    },
+  },
+  {
     id: 4,
     title: "MegaBites",
     type: "Mobile App",
@@ -61,6 +112,38 @@ export const PROJECTS: ProjectProperties[] = [
     isFeatured: false,
     links: {
       github: "https://github.com/Silver-Sword/MegaBites",
+    },
+  },
+  {
+    id: 9,
+    title: "Personal Portfolio Website",
+    type: "Web App",
+    description:
+      "The very website you are viewing. A personal portfolio website to showcase my work and highlights.",
+    image: "/project-images/portfolio.jpg",
+    alt: "A colorful portfolio container.",
+    skills: ["React", "Next.js", "Tailwind CSS", "Github Pages"],
+    isTeamProject: false,
+    isFeatured: false,
+    links: {
+      github: "https://github.com/Silver-Sword/Silver-Sword.github.io",
+      site: "https://silver-sword.github.io/",
+    },
+  },
+  {
+    id: 12,
+    title: "Splay Tree and Link Cut Tree Paper",
+    type: "Research Paper",
+    description:
+      "A research paper on Splay Trees and Link Cut Trees, two data structures used in graph theory.",
+    image: "/project-images/tree.jpg",
+    alt: "A tree",
+    skills: ["C++", "Data Structures", "Algorithms"],
+    isTeamProject: false,
+    isFeatured: false,
+    links: {
+      paper:
+        "https://drive.google.com/file/d/1CT5CMdqIiQxkxC3VmARE5qlg90l7X48N/view?usp=sharing",
     },
   },
   {
@@ -97,7 +180,7 @@ export const PROJECTS: ProjectProperties[] = [
   },
   {
     id: 7,
-    title: "Alchemy",
+    title: "Alchemy Game",
     type: "Video Game",
     description: "Mix items and create increasingly complex entities.",
     image: "/project-images/elements.jpg",
@@ -107,84 +190,6 @@ export const PROJECTS: ProjectProperties[] = [
     isFeatured: false,
     links: {
       github: "https://github.com/Silver-Sword/Alchemy",
-    },
-  },
-  {
-    id: 8,
-    title: "Competitive Programming Training",
-    type: "Collection of Solutions",
-    description:
-      "A collection of solutions to competitive programming problems from Codeforces and other similar sites.",
-    image: "/project-images/programming.webp",
-    alt: "A black screen with vertical lines of green numbers and letters",
-    skills: ["C++", "Java", "Algorithms", "Data Structures"],
-    isTeamProject: false,
-    isFeatured: false,
-    links: {
-      github: "https://github.com/Silver-Sword/Competitive-Programming-Samples",
-    },
-  },
-  {
-    id: 9,
-    title: "Personal Portfolio Website",
-    type: "Web App",
-    description:
-      "The very website you are viewing. A personal portfolio website to showcase my work and highlights.",
-    image: "/project-images/portfolio.jpg",
-    alt: "A colorful portfolio container.",
-    skills: ["React", "Next.js", "Tailwind CSS", "Github Pages"],
-    isTeamProject: false,
-    isFeatured: false,
-    links: {
-      github: "https://github.com/Silver-Sword/Silver-Sword.github.io",
-      site: "https://silver-sword.github.io/",
-    },
-  },
-  {
-    id: 10,
-    title: "Privacy-Conscious Fall Dectection Machine Learning Research",
-    type: "Research Poster",
-    description:
-      "A research poster on detecting fallen people in static images using machine learning and Python.",
-    image: "/project-images/fallen-person.jpg",
-    alt: "Several clipart images of older individuals in various stages of falling.",
-    skills: ["Python", "Machine Learning", "Computer Vision"],
-    isTeamProject: false,
-    isFeatured: false,
-    links: {
-      site: "https://iotreu.cs.ucf.edu/wp-content/uploads/2023/05/Gittings_Chris_REU_Poster_Sum22.pdf",
-    },
-  },
-  {
-    id: 11,
-    title: "Dynamic Connectivity Paper",
-    type: "Research Paper",
-    description:
-      "A exploratory paper on Dynamic Connectivity, a data structure used in graph theory.",
-    image: "/project-images/dynamic-connectivity-image.png",
-    alt: "A artistically rendered graph.",
-    skills: ["C++", "Data Structures", "Algorithms"],
-    isTeamProject: false,
-    isFeatured: false,
-    links: {
-      paper:
-        "https://drive.google.com/file/d/1HASUOMZgv2qnuIYckaLrlmD8RH_dc5SG/view?usp=sharing",
-    },
-  },
-  {
-    id: 12,
-    title: "Splay Tree and Link Cut Tree Paper",
-    type: "Research Paper",
-    description:
-      "A research paper on Splay Trees and Link Cut Trees, two data structures used in graph theory.",
-    image: "/project-images/tree.jpg",
-    alt: "A tree",
-    skills: ["C++", "Data Structures", "Algorithms"],
-    isTeamProject: false,
-    isFeatured: false,
-    links: {
-      paper:
-        "https://drive.google.com/file/d/1CT5CMdqIiQxkxC3VmARE5qlg90l7X48N/view?usp=sharing",
     },
   },
 ];
