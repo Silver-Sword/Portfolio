@@ -3,7 +3,13 @@ import Image from "next/image";
 
 import { BlogProperties } from "@/app/blog/BlogProperties";
 
-export function BlogCard({ id, title, description, image }: BlogProperties) {
+export function BlogCard({
+  id,
+  title,
+  description,
+  image,
+  date_written,
+}: BlogProperties) {
   return (
     <Link
       key={id}
@@ -20,7 +26,7 @@ export function BlogCard({ id, title, description, image }: BlogProperties) {
           className="w-full h-48 object-cover"
         />
         <div className="p-4">
-          <h3 className="text-xl font-semibold mb-2">{title}</h3>
+          <h3 className="text-xl font-semibold mb-1">{title}</h3>
           <p className="text-muted-foreground">{description}</p>
         </div>
       </div>
