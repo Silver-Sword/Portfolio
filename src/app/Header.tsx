@@ -52,6 +52,14 @@ export default function Header() {
                 </Link>
               </li>
             )}
+            <li>
+              <Link
+                href="/dogs"
+                className={`hover:underline text-lg ${pathname === "/dogs" ? "font-bold" : ""}`}
+              >
+                Dogs
+              </Link>
+            </li>
           </ul>
         </nav>
         <div className="w-1/4"></div>
