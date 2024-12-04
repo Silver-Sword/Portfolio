@@ -3,12 +3,14 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 interface MasonryProps {
   columnWidth: number;
+  setCardWidth: (width: number) => void;
   children: React.ReactNode;
 }
 
 export const MasonryLayout: React.FC<MasonryProps> = ({
   columnWidth,
   children,
+  setCardWidth,
 }) => {
   const [reactiveWidth, setReactiveWidth] = useState(columnWidth);
   const [breakpoints, setBreakpoints] = useState({} as Record<number, number>);
@@ -23,6 +25,7 @@ export const MasonryLayout: React.FC<MasonryProps> = ({
       }
 
       setReactiveWidth(newWidth); // Default column width
+      setCardWidth(newWidth);
 
       let curPixels = reactiveWidth;
       const updatedBreakpoints: Record<number, number> = {};
