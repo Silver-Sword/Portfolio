@@ -1,10 +1,29 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+
 import FavoriteCard from "./FavoriteCard";
 import { getImageAspectRatio } from "@/lib/getImageAspectRatio";
 import { FAVORITES_DATA } from "./favorites";
 
+interface MasonryProps {
+  children: React.ReactNode;
+}
+
+export const MasonryLayout: React.FC<MasonryProps> = ({ children }) => {
+  const breakpoints: Record<number, number> = {};
+  let curPixels = 200;
+  for (let i = 1; i < 100; i++) {
+    breakpoints[curPixels] = i;
+    curPixels += 200 + 10;
+  }
+  return (
+    <ResponsiveMasonry columnsCountBreakPoints={breakpoints}>
+      <Masonry gutter="10px">{children}</Masonry>
+    </ResponsiveMasonry>
+  );
+};
 interface FavoriteItem {
   name: string;
   link: string;
@@ -14,22 +33,7 @@ interface FavoriteItem {
 }
 
 export default function FavoriteSection() {
-  const [columnWidth, setColumnWidth] = useState(200);
   const [favorites, setFavorites] = useState<FavoriteItem[]>([]);
-
-  useEffect(() => {
-    const updateColumnWidth = () => {
-      if (window.innerWidth < 200) {
-        setColumnWidth(window.innerWidth - 32); // Full width minus padding
-      } else {
-        setColumnWidth(200); // Default column width
-      }
-    };
-
-    updateColumnWidth();
-    window.addEventListener("resize", updateColumnWidth);
-    return () => window.removeEventListener("resize", updateColumnWidth);
-  }, []);
 
   useEffect(() => {
     const favoritesData = FAVORITES_DATA;
@@ -53,13 +57,7 @@ export default function FavoriteSection() {
   return (
     <section className="container mx-auto px-4">
       <h2 className="text-3xl font-semibold mb-8">My Favorites</h2>
-      <div
-        className="grid gap-4"
-        style={{
-          gridTemplateColumns: `repeat(auto-fill, minmax(${columnWidth}px, 1fr))`,
-          gridAutoRows: "10px",
-        }}
-      >
+      <MasonryLayout>
         {favorites.map((item, index) => (
           <FavoriteCard
             category={item.category}
@@ -70,7 +68,7 @@ export default function FavoriteSection() {
             key={item.name.replace(/\s/g, "-") + index}
           />
         ))}
-      </div>
+      </MasonryLayout>
     </section>
   );
 }
