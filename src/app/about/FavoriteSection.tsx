@@ -15,22 +15,9 @@ interface FavoriteItem {
 }
 
 export default function FavoriteSection() {
-  const [columnWidth, setColumnWidth] = useState(200);
+  const columnWidth = 200;
   const [favorites, setFavorites] = useState<FavoriteItem[]>([]);
-
-  useEffect(() => {
-    const updateColumnWidth = () => {
-      if (window.innerWidth < 200) {
-        setColumnWidth(window.innerWidth - 32); // Full width minus padding
-      } else {
-        setColumnWidth(200); // Default column width
-      }
-    };
-
-    updateColumnWidth();
-    window.addEventListener("resize", updateColumnWidth);
-    return () => window.removeEventListener("resize", updateColumnWidth);
-  }, []);
+  const [cardwidth, setCardWidth] = useState(columnWidth);
 
   useEffect(() => {
     const favoritesData = FAVORITES_DATA;
@@ -54,7 +41,7 @@ export default function FavoriteSection() {
   return (
     <section className="container mx-auto px-4">
       <h2 className="text-3xl font-semibold mb-8">My Favorites</h2>
-      <MasonryLayout columnWidth={columnWidth}>
+      <MasonryLayout columnWidth={columnWidth} setCardWidth={setCardWidth}>
         {favorites.map((item, index) => (
           <FavoriteCard
             category={item.category}
