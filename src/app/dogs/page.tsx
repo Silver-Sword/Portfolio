@@ -13,7 +13,7 @@ export default function Dogs() {
       </h1>
       <MasonryLayout columnWidth={200}>
         {dogs.map((dog) => (
-          <DogCard {...dog} />
+          <DogCard width={200} {...dog} />
         ))}
       </MasonryLayout>
     </div>

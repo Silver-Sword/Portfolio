@@ -1,8 +1,8 @@
-import Dogs from "./page";
+import { ImageData } from "@/lib/ImageData";
 
 export type DogProperties = {
   name: string;
-  image?: string;
+  imageData?: ImageData;
   description: string;
 };
 
@@ -12,7 +12,12 @@ export const DOGS: DogProperties[] = [
   {
     name: "Buddy",
     description: "Family Dog",
-    image: `${IMAGE_URL}/Buddy.jpg`,
+    imageData: {
+      url: `${IMAGE_URL}/Buddy.jpg`,
+      pixelWidth: 3024,
+      pixelHeight: 4032,
+      alt: "Buddy",
+    },
   },
   {
     name: "Bailey",
@@ -29,7 +34,12 @@ export const DOGS: DogProperties[] = [
   {
     name: "Mora",
     description: "Statsig",
-    image: `${IMAGE_URL}/Mora.jpg`,
+    imageData: {
+      url: `${IMAGE_URL}/Mora.jpg`,
+      pixelWidth: 3024,
+      pixelHeight: 4032,
+      alt: "Mora",
+    },
   },
   {
     name: "Kiwi",
@@ -38,29 +48,55 @@ export const DOGS: DogProperties[] = [
   {
     name: "Ollie",
     description: "Statsig",
-    image: `${IMAGE_URL}/Ollie.jpg`,
+    imageData: {
+      url: `${IMAGE_URL}/Ollie.jpg`,
+      pixelWidth: 3024,
+      pixelHeight: 4032,
+      alt: "Ollie",
+    },
   },
   {
     name: "Ross",
     description: "Statsig",
-    image: `${IMAGE_URL}/Ross.jpg`,
+    imageData: {
+      url: `${IMAGE_URL}/Ross.jpg`,
+      pixelWidth: 1200,
+      pixelHeight: 664,
+      alt: "Ross",
+    },
   },
   {
     name: "Bodie",
     description: "Statsig",
-    image: `${IMAGE_URL}/Bodie.jpg`,
+    imageData: {
+      url: `${IMAGE_URL}/Bodie.jpg`,
+      pixelWidth: 3072,
+      pixelHeight: 4096,
+      alt: "Bodie",
+    },
   },
   {
     name: "Smudge",
     description: "Statsig",
+    imageData: {
+      url: `${IMAGE_URL}/Smudge.jpg`,
+      pixelWidth: 2048,
+      pixelHeight: 2731,
+      alt: "Smudge",
+    },
   },
   {
     name: "Charlie",
     description: "Statsig",
-    image: `${IMAGE_URL}/Charlie.jpg`,
+    imageData: {
+      url: `${IMAGE_URL}/Charlie.jpg`,
+      pixelWidth: 400,
+      pixelHeight: 600,
+      alt: "Charlie",
+    },
   },
 ];
 
 export function getDogs() {
-  return DOGS.filter((dog) => dog.image !== undefined);
+  return DOGS.filter((dog) => dog.imageData !== undefined);
 }
