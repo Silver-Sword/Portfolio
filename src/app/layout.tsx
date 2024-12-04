@@ -1,6 +1,5 @@
 "use client";
 
-import { MantineProvider } from "@mantine/core";
 import "./globals.css";
 import Header from "./Header";
 
@@ -18,21 +17,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <MantineProvider>
-          <Header />
-          <div className="flex flex-col min-h-screen">
-            <main className="flex-grow container mx-auto px-6 py-8">
-              {children}
-            </main>
-            <footer className="text-primary-foreground mt-8">
-              <div className="container mx-auto px-6 py-6 text-center">
-                <span className="text-gray-400">
-                  © 2024 Chris Gittings. All rights reserved.
-                </span>
-              </div>
-            </footer>
-          </div>
-        </MantineProvider>
+        <Header />
+        <div className="flex flex-col min-h-screen">
+          <main className="flex-grow container mx-auto px-6 py-8">
+            {children}
+          </main>
+          <footer className="text-primary-foreground mt-8">
+            <div className="container mx-auto px-6 py-6 text-center">
+              <span className="text-gray-400">
+                © 2024 Chris Gittings. All rights reserved.
+              </span>
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   );
