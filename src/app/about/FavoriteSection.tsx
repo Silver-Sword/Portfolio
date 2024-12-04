@@ -67,6 +67,7 @@ export default function FavoriteSection() {
             link={item.link}
             image_url={item.image_url}
             imageAspectRatio={item.imageAspectRatio || 1}
+            key={item.name.replace(/\s/g, "-") + index}
           />
         ))}
       </div>
