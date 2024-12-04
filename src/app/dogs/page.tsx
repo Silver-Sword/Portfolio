@@ -1,5 +1,8 @@
+"use client";
+
 import { getDogs } from "./dogs_data";
 import { DogCard } from "./DogCard";
+import { MasonryLayout } from "@/components/ui/masonry/MasonryLayout";
 
 const dogs = getDogs();
 export default function Dogs() {
@@ -8,17 +11,11 @@ export default function Dogs() {
       <h1 className="text-4xl font-bold mb-8 text-center">
         Collection of My Furry Friends
       </h1>
-      <div
-        className="grid gap-4"
-        style={{
-          gridTemplateColumns: `repeat(auto-fill, minmax(${175}px, 1fr))`,
-          gridAutoRows: "285px",
-        }}
-      >
+      <MasonryLayout columnWidth={200}>
         {dogs.map((dog) => (
           <DogCard {...dog} />
         ))}
-      </div>
+      </MasonryLayout>
     </div>
   );
 }
