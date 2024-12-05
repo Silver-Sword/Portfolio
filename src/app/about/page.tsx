@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Badge } from "@/components/ui/badge";
 import { Timeline, TimelineItem } from "@/components/ui/timeline";
 
@@ -114,11 +116,13 @@ export default function About() {
           regional competition as well as online on sites like Codeforces and
           CodeChef.
           <br />
-          <br />
-          I am about to graduate with a degree in Computer Science and I'm
+          <br />I am about to graduate with a degree in Computer Science and I'm
           excited to apply my skills to real-world problems. When I'm not
           coding, you can find me exploring new technologies, playing video
-          games, or diving into a good book.
+          games, or diving into a good book.{" "}
+          <Link href="/dogs" className="hover:underline text-gray-400">
+            I'm also a big fan of dogs.
+          </Link>
           <br />
           <br />
         </p>

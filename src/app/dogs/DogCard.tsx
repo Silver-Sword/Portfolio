@@ -11,13 +11,11 @@ export function DogCard({
   width,
 }: DogProperties & { width: number }) {
   return (
-    <div>
-      <MasonryCard columnWidth={width} imageData={imageData as ImageData}>
-        <div className="p-4">
-          <h3 className="text-xl font-semibold mb-1">{name}</h3>
-          <p className="text-muted-foreground">{description}</p>
-        </div>
-      </MasonryCard>
-    </div>
+    <MasonryCard columnWidth={width} imageData={imageData as ImageData}>
+      <div className="p-4">
+        <h3 className="text-xl font-semibold mb-1">{name}</h3>
+        <p className="text-muted-foreground">{description}</p>
+      </div>
+    </MasonryCard>
   );
 }
