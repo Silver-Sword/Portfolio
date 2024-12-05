@@ -16,13 +16,14 @@ export const MasonryCard: React.FC<MasonryProps> = ({
   imageData,
   children,
 }) => {
+  const maxWidth = columnWidth * 10;
   return (
     <div className="border rounded-lg overflow-hidden shadow-lg transition-transform duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-lg">
       <Image
         src={imageData.url}
         alt={imageData.alt}
-        width={columnWidth}
-        height={(columnWidth * imageData.pixelHeight) / imageData.pixelWidth}
+        width={maxWidth}
+        height={(maxWidth * imageData.pixelHeight) / imageData.pixelWidth}
         className="object-cover"
       />
       {children}
