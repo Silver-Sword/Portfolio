@@ -27,11 +27,11 @@ export const MasonryLayout: React.FC<MasonryProps> = ({
       setReactiveWidth(newWidth); // Default column width
       setCardWidth(newWidth);
 
-      let curPixels = reactiveWidth;
+      let curPixels = newWidth + gutterGap;
       const updatedBreakpoints: Record<number, number> = {};
       for (let i = 1; i < 100; i++) {
         updatedBreakpoints[curPixels] = i;
-        curPixels += reactiveWidth + gutterGap;
+        curPixels += newWidth;
       }
       setBreakpoints(updatedBreakpoints);
     };
