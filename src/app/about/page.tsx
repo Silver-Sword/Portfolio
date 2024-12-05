@@ -155,7 +155,7 @@ export default function About() {
               </TimelineItem.Header>
               <TimelineItem.Content>
                 <p className="text-sm text-muted-foreground mb-2">{job.date}</p>
-                <ul className="list-disc list-outside space-y-1">
+                <ul className="list-disc px-3 list-outside space-y-1">
                   {job.description.map((item, index) => (
                     <li key={index} className="text-sm">
                       {item}
