@@ -1,17 +1,6 @@
 const IMAGE_URL = "/favorites-images";
 export const FAVORITES_DATA = [
   {
-    name: "Portal 2",
-    link: "https://store.steampowered.com/app/620/Portal_2/",
-    category: "video game",
-    imageData: {
-      url: `${IMAGE_URL}/portal-2.webp`,
-      pixelWidth: 1200,
-      pixelHeight: 1200,
-      alt: "Portal 2",
-    },
-  },
-  {
     name: "Stanley Parable",
     link: "https://store.steampowered.com/app/221910/The_Stanley_Parable/",
     category: "video game",
@@ -20,50 +9,6 @@ export const FAVORITES_DATA = [
       pixelWidth: 220,
       pixelHeight: 220,
       alt: "Stanley Parable",
-    },
-  },
-  {
-    name: "Noita",
-    category: "video game",
-    link: "https://store.steampowered.com/app/881100/Noita/",
-    imageData: {
-      url: `${IMAGE_URL}/noita.jpg`,
-      pixelWidth: 342,
-      pixelHeight: 482,
-      alt: "Noita",
-    },
-  },
-  {
-    name: "Control",
-    category: "video game",
-    link: "https://store.steampowered.com/app/870780/Control_Ultimate_Edition/",
-    imageData: {
-      url: `${IMAGE_URL}/control.jpg`,
-      pixelWidth: 1024,
-      pixelHeight: 576,
-      alt: "Control",
-    },
-  },
-  {
-    name: "Antichamber",
-    category: "video game",
-    link: "https://store.steampowered.com/app/219890/Antichamber/",
-    imageData: {
-      url: `${IMAGE_URL}/antichamber.jpg`,
-      pixelWidth: 1920,
-      pixelHeight: 1080,
-      alt: "Antichamber",
-    },
-  },
-  {
-    name: "Mother of Learning",
-    category: "novel",
-    link: "https://www.royalroad.com/fiction/21220/mother-of-learning",
-    imageData: {
-      url: `${IMAGE_URL}/mother-of-learning.jpg`,
-      pixelWidth: 667,
-      pixelHeight: 1000,
-      alt: "Mother of Learning",
     },
   },
   {
@@ -100,6 +45,72 @@ export const FAVORITES_DATA = [
     },
   },
   {
+    name: "Noita",
+    category: "video game",
+    link: "https://store.steampowered.com/app/881100/Noita/",
+    imageData: {
+      url: `${IMAGE_URL}/noita.jpg`,
+      pixelWidth: 342,
+      pixelHeight: 482,
+      alt: "Noita",
+    },
+  },
+  {
+    name: "Portal 2",
+    link: "https://store.steampowered.com/app/620/Portal_2/",
+    category: "video game",
+    imageData: {
+      url: `${IMAGE_URL}/portal-2.webp`,
+      pixelWidth: 1200,
+      pixelHeight: 1200,
+      alt: "Portal 2",
+    },
+  },
+  {
+    name: "Control",
+    category: "video game",
+    link: "https://store.steampowered.com/app/870780/Control_Ultimate_Edition/",
+    imageData: {
+      url: `${IMAGE_URL}/control.jpg`,
+      pixelWidth: 1024,
+      pixelHeight: 576,
+      alt: "Control",
+    },
+  },
+  {
+    name: "Antichamber",
+    category: "video game",
+    link: "https://store.steampowered.com/app/219890/Antichamber/",
+    imageData: {
+      url: `${IMAGE_URL}/antichamber.jpg`,
+      pixelWidth: 1920,
+      pixelHeight: 1080,
+      alt: "Antichamber",
+    },
+  },
+  {
+    name: "Mother of Learning",
+    category: "novel",
+    link: "https://www.royalroad.com/fiction/21220/mother-of-learning",
+    imageData: {
+      url: `${IMAGE_URL}/mother-of-learning.jpg`,
+      pixelWidth: 667,
+      pixelHeight: 1000,
+      alt: "Mother of Learning",
+    },
+  },
+  {
+    name: "Segment Trees",
+    category: "algorithm",
+    link: "https://en.wikipedia.org/wiki/Segment_tree",
+    imageData: {
+      url: `${IMAGE_URL}/segment-tree.jpg`,
+      pixelWidth: 631,
+      pixelHeight: 494,
+      alt: "Segment Trees",
+    },
+  },
+  {
     name: "Ready Player One",
     category: "novel",
     link: "https://www.goodreads.com/book/show/9969571-ready-player-one",
@@ -120,17 +131,6 @@ export const FAVORITES_DATA = [
       pixelWidth: 284,
       pixelHeight: 178,
       alt: "Tries",
-    },
-  },
-  {
-    name: "Segment Trees",
-    category: "algorithm",
-    link: "https://en.wikipedia.org/wiki/Segment_tree",
-    imageData: {
-      url: `${IMAGE_URL}/segment-tree.jpg`,
-      pixelWidth: 631,
-      pixelHeight: 494,
-      alt: "Segment Trees",
     },
   },
   {
