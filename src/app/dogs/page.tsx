@@ -19,8 +19,8 @@ export default function Dogs() {
         columnWidth={desiredColumnWidth}
         setCardWidth={setCardWidth}
       >
-        {dogs.map((dog) => (
-          <DogCard width={cardWidth} {...dog} />
+        {dogs.map((dog, index) => (
+          <DogCard width={cardWidth} {...dog} key={index} />
         ))}
       </MasonryLayout>
     </div>
