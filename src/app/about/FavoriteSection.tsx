@@ -14,7 +14,7 @@ interface FavoriteItem {
 }
 
 export default function FavoriteSection() {
-  const columnWidth = 200;
+  const columnWidth = 250;
   const [favorites, setFavorites] = useState<FavoriteItem[]>(FAVORITES_DATA);
   const [cardwidth, setCardWidth] = useState(columnWidth);
 
