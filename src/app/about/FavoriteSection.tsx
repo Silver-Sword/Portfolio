@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { getImageAspectRatio } from "@/lib/getImageAspectRatio";
+import { ImageData } from "@/lib/ImageData";
 import { MasonryLayout } from "@/components/ui/masonry/MasonryLayout";
 import FavoriteCard from "./FavoriteCard";
 import { FAVORITES_DATA } from "./favorites";
@@ -9,34 +9,14 @@ import { FAVORITES_DATA } from "./favorites";
 interface FavoriteItem {
   name: string;
   link: string;
-  image_url: string;
   category: string;
-  imageAspectRatio?: number;
+  imageData: ImageData;
 }
 
 export default function FavoriteSection() {
   const columnWidth = 200;
-  const [favorites, setFavorites] = useState<FavoriteItem[]>([]);
+  const [favorites, setFavorites] = useState<FavoriteItem[]>(FAVORITES_DATA);
   const [cardwidth, setCardWidth] = useState(columnWidth);
-
-  useEffect(() => {
-    const favoritesData = FAVORITES_DATA;
-
-    const loadFavorites = async () => {
-      const loadedFavorites = await Promise.all(
-        Object.entries(favoritesData).flatMap(([category, items]) =>
-          items.map(async (item) => ({
-            ...item,
-            category,
-            imageAspectRatio: await getImageAspectRatio(item.image_url),
-          }))
-        )
-      );
-      setFavorites(loadedFavorites);
-    };
-
-    loadFavorites();
-  }, []);
 
   return (
     <section className="container mx-auto px-4">
@@ -47,8 +27,8 @@ export default function FavoriteSection() {
             category={item.category}
             name={item.name}
             link={item.link}
-            image_url={item.image_url}
-            imageAspectRatio={item.imageAspectRatio || 1}
+            imageData={item.imageData}
+            columnWidth={cardwidth}
             key={index}
           />
         ))}
