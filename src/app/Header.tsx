@@ -2,8 +2,7 @@ import "./globals.css";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const INCLUDE_BLOGS = true;
+import { INCLUDE_BLOGS } from "./vars";
 
 export default function Header() {
   const pathname = usePathname();
