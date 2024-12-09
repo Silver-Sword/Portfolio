@@ -59,10 +59,10 @@ export default function Home() {
       <section id="about">
         <h2 className="text-3xl font-semibold mb-6 text-center">About Me</h2>
         <p className="max-w-2xl mx-auto text-center text-lg">
-          Hi 👋 I'm Chris. I am a competitive programmer and software engineer
-          pursuing a Bachelor's in Computer Science at the University of Central
-          Florida graduating in December 2024. I am drawn towards backend
-          development and indie game development.
+          Hi 👋 I'm Chris! I am a competitive programmer and software engineer
+          with a Bachelor's in Computer Science from the University of Central
+          Florida. I am drawn towards backend development and indie game
+          development.
         </p>
       </section>
 
