@@ -16,10 +16,6 @@ export function sortMasonryObjects<T extends MasonryObject>(
       (sortedObj[index].imageData.pixelHeight * columnWidth) /
       sortedObj[index].imageData.pixelWidth
   );
-  console.debug(
-    `Starting Row: ${sortedObj.map((r) => `${r.imageData.alt} (${r.imageData.pixelHeight})`).join(", ")}`
-  );
-  console.debug(`Starting Heights: ${colsHeight.join(", ")}`);
   let idx = numColumns;
 
   while (idx < obj.length) {
@@ -48,21 +44,12 @@ function orderRow<T extends MasonryObject>(
     { length: newRow.length },
     () => undefined
   );
-
   const used = Array.from({ length: newRow.length }, () => false);
-
-  console.debug(
-    `initial row: ${(newRow as MasonryObject[]).map((r) => `${r.imageData.alt} (${r.imageData.pixelHeight})`).join(", ")}`
-  );
 
   newRow.sort((a, b) => {
     return getImageRatio(a.imageData) - getImageRatio(b.imageData);
   });
 
-  console.debug(
-    `sorted row: ${(newRow as MasonryObject[]).map((r) => `${r.imageData.alt} (${r.imageData.pixelHeight})`).join(", ")}`
-  );
-  console.debug(`Heights: ${colsHeight.join(", ")}`);
   for (let i = 0; i < newRow.length; i++) {
     let colIdx = 0;
     colsHeight.forEach((height, idx) =>
@@ -72,14 +59,10 @@ function orderRow<T extends MasonryObject>(
           used[idx] ||
           (colIdx = colsHeight[colIdx] < height ? idx : colIdx)
     );
-    console.debug(`Image ${newRow[i].imageData.alt} goes to column ${colIdx}`);
     orderedRow[colIdx] = newRow[i];
     used[colIdx] = true;
   }
 
-  console.debug(
-    `ordered row: ${(orderedRow as MasonryObject[]).map((r) => `${r.imageData.alt} (${r.imageData.pixelHeight})`).join(", ")}`
-  );
   return orderedRow as T[];
 }
 
