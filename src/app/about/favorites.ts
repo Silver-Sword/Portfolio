@@ -1,7 +1,13 @@
-import { link } from "fs";
+import { ImageData } from "@/lib/ImageData";
 
 const IMAGE_URL = "/favorites-images";
-export const FAVORITES_DATA = [
+type FavoriteItem = {
+  name: string;
+  link: string;
+  category: string;
+  imageData: ImageData;
+};
+export const FAVORITES_DATA: FavoriteItem[] = [
   {
     name: "Stanley Parable",
     link: "https://store.steampowered.com/app/221910/The_Stanley_Parable/",

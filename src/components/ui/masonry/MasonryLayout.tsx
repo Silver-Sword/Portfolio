@@ -4,6 +4,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 interface MasonryProps {
   columnWidth: number;
   setCardWidth: (width: number) => void;
+  onNumColumnsChange?: (columns: number) => void;
   children: React.ReactNode;
 }
 
@@ -11,8 +12,10 @@ export const MasonryLayout: React.FC<MasonryProps> = ({
   columnWidth,
   children,
   setCardWidth,
+  onNumColumnsChange,
 }) => {
   const [reactiveWidth, setReactiveWidth] = useState(columnWidth);
+  const [computedNumColumns, setComputedNumColumns] = useState(1);
   const [breakpoints, setBreakpoints] = useState({} as Record<number, number>);
 
   const gutterGap = 10;
@@ -34,6 +37,15 @@ export const MasonryLayout: React.FC<MasonryProps> = ({
         curPixels += newWidth;
       }
       setBreakpoints(updatedBreakpoints);
+
+      let maxBreakpointReached = 0;
+      for (const [key, value] of Object.entries(updatedBreakpoints)) {
+        if (window.innerWidth > parseInt(key)) {
+          maxBreakpointReached = Math.max(maxBreakpointReached, value);
+        }
+      }
+      onNumColumnsChange && onNumColumnsChange(maxBreakpointReached);
+      setComputedNumColumns(maxBreakpointReached);
     };
 
     updateReactiveLayout();

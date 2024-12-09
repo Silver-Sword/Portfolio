@@ -4,11 +4,13 @@ import React, { useState } from "react";
 import { getDogs } from "./dogs_data";
 import { DogCard } from "./DogCard";
 import { MasonryLayout } from "@/components/ui/masonry/MasonryLayout";
+import { sortMasonryObjects } from "@/components/ui/masonry/sortMasonryObjects";
 
 const dogs = getDogs();
 export default function Dogs() {
   const desiredColumnWidth = 200;
   const [cardWidth, setCardWidth] = useState(desiredColumnWidth);
+  const [numComputedColumns, setComputedNumColumns] = useState(0);
 
   return (
     <div>
@@ -18,10 +20,13 @@ export default function Dogs() {
       <MasonryLayout
         columnWidth={desiredColumnWidth}
         setCardWidth={setCardWidth}
+        onNumColumnsChange={setComputedNumColumns}
       >
-        {dogs.map((dog, index) => (
-          <DogCard width={cardWidth} {...dog} key={index} />
-        ))}
+        {sortMasonryObjects(numComputedColumns, cardWidth, dogs).map(
+          (dog, index) => (
+            <DogCard width={cardWidth} {...dog} key={index} />
+          )
+        )}
       </MasonryLayout>
     </div>
   );
