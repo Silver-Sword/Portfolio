@@ -6,10 +6,9 @@ import { BlogCard } from "@/components/BlogCard";
 
 import { getFeaturedProjects } from "./projects/projectPreviews";
 import { getFeaturedPosts } from "./blog/blogPreviews";
+import { INCLUDE_BLOGS } from "./vars";
 
 const projects = getFeaturedProjects();
-
-const INCLUDE_BLOGS = true;
 const blogPosts = getFeaturedPosts();
 
 export default function Home() {
