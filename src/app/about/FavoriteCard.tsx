@@ -36,7 +36,7 @@ export default function FavoriteCard({
             className="object-cover"
           />
         </div> */}
-      <div className="p-4 flex flex-col justify-between h-[88px]">
+      <div className="p-4 flex flex-col">
         <div className="flex justify-between items-start">
           <Badge variant="secondary" className="text-xs">
             {category.replace(/_/g, " ")}
@@ -52,7 +52,9 @@ export default function FavoriteCard({
             <span className="sr-only">Visit {name}</span>
           </Link>
         </div>
-        <h3 className="text-lg font-semibold leading-tight">{name}</h3>
+        <h3 className="text-lg font-semibold leading-tight mt-3 mb-1">
+          {name}
+        </h3>
       </div>
     </MasonryCard>
   );
