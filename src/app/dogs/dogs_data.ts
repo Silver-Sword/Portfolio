@@ -98,5 +98,7 @@ export const DOGS: DogProperties[] = [
 ];
 
 export function getDogs() {
-  return DOGS.filter((dog) => dog.imageData !== undefined);
+  return DOGS.filter((dog) => dog.imageData !== undefined) as (DogProperties & {
+    imageData: ImageData;
+  })[];
 }
