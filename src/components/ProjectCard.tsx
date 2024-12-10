@@ -74,9 +74,9 @@ export function ProjectCard({
           </div>
         </div>
 
-        <p className="text-muted-foreground mb-4">
+        <div className="text-muted-foreground mb-4">
           <Badge variant="outline">{type.trim()}</Badge> | {description}
-        </p>
+        </div>
         <div className="flex flex-wrap gap-2">
           {skills.map((skill, index) => (
             <Badge key={index} variant="secondary">
