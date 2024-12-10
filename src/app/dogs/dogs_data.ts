@@ -22,6 +22,12 @@ export const DOGS: DogProperties[] = [
   {
     name: "Bailey",
     description: "Family Dog",
+    imageData: {
+      url: `${IMAGE_URL}/Bailey.jpg`,
+      pixelWidth: 3072,
+      pixelHeight: 2304,
+      alt: "Bailey",
+    },
   },
   {
     name: "Molly",
@@ -93,6 +99,36 @@ export const DOGS: DogProperties[] = [
       pixelWidth: 400,
       pixelHeight: 600,
       alt: "Charlie",
+    },
+  },
+  {
+    name: "Olaf",
+    description: "Family Friend",
+    imageData: {
+      url: `${IMAGE_URL}/Olaf.jpg`,
+      pixelWidth: 3024,
+      pixelHeight: 4032,
+      alt: "Olaf",
+    },
+  },
+  {
+    name: "Sven",
+    description: "Family Friend",
+    imageData: {
+      url: `${IMAGE_URL}/Sven.jpg`,
+      pixelWidth: 3024,
+      pixelHeight: 4032,
+      alt: "Sven",
+    },
+  },
+  {
+    name: "Kirby",
+    description: "Statsig",
+    imageData: {
+      url: `${IMAGE_URL}/Kirby.jpg`,
+      pixelWidth: 400,
+      pixelHeight: 600,
+      alt: "Kirby",
     },
   },
 ];
