@@ -39,14 +39,14 @@ export default function FavoriteCard({
             className="object-cover"
           /> */}
           <div className="p-4 flex flex-col">
-            <div className="flex justify-between items-start">
-              <Badge variant="secondary" className="text-xs">
-                {category.replace(/_/g, " ")}
-              </Badge>
-            </div>
-            <h3 className="text-lg font-semibold leading-tight mt-3 mb-1">
+            <h3 className="text-lg font-semibold leading-tight mt-1 mb-3">
               {name}
             </h3>
+            <div className="flex justify-between items-start mb-1">
+              <p className="text-xs text-muted-foreground">
+                {category.replace(/_/g, " ")}
+              </p>
+            </div>
           </div>
         </MasonryCard>
       </div>
