@@ -24,7 +24,6 @@ export const MasonryCard: React.FC<MasonryProps> = ({
         alt={imageData.alt}
         width={maxWidth}
         height={(maxWidth * imageData.pixelHeight) / imageData.pixelWidth}
-        className="object-cover"
       />
       {children}
     </div>
