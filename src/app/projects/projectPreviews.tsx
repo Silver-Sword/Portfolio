@@ -14,6 +14,7 @@ export const PROJECTS: ProjectProperties[] = [
     isFeatured: true,
     links: {
       github: "https://github.com/Silver-Sword/Tune-Tracer",
+      site: "https://l17-tune-tracer.web.app/",
     },
   },
   {
