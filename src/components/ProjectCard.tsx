@@ -2,10 +2,12 @@ import { ProjectProperties } from "@/app/projects/ProjectProperties";
 
 import Image from "next/image";
 import { User, Users, Github, Youtube, FileText, Globe } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 export function ProjectCard({
   id,
   title,
+  type,
   description,
   image,
   skills,
@@ -23,28 +25,7 @@ export function ProjectCard({
       />
       <div className="p-4">
         <div className="flex justify-between items-center mb-2">
-          <h3 className="text-xl font-semibold">{title}</h3>
-          {isTeamProject ? (
-            <Users className="h-5 w-5 text-primary" aria-label="Team Project" />
-          ) : (
-            <User
-              className="h-5 w-5 text-primary"
-              aria-label="Individual Project"
-            />
-          )}
-        </div>
-        <p className="text-muted-foreground mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {skills.map((skill, index) => (
-            <span
-              key={index}
-              className="bg-primary text-primary-foreground text-xs px-2 py-1 rounded"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-        <div className="flex justify-between items-center">
+          <h3 className="text-xl font-semibold">{title}</h3>{" "}
           <div className="flex space-x-2">
             {links.github && (
               <a
@@ -91,6 +72,17 @@ export function ProjectCard({
               </a>
             )}
           </div>
+        </div>
+
+        <p className="text-muted-foreground mb-4">
+          <Badge variant="outline">{type.trim()}</Badge> | {description}
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {skills.map((skill, index) => (
+            <Badge key={index} variant="secondary">
+              {skill}
+            </Badge>
+          ))}
         </div>
       </div>
     </div>
