@@ -1,3 +1,4 @@
+"use client";
 import "./globals.css";
 
 import Link from "next/link";
@@ -6,6 +7,8 @@ import { INCLUDE_BLOGS } from "./vars";
 
 export default function Header() {
   const pathname = usePathname();
+  const hoverEffect =
+    "hover:text-gray-600 transition-transform duration-300 ease-in-out transform";
 
   return (
     <header className="sticky top-0 bg-background text-foreground shadow-md z-10">
@@ -20,7 +23,7 @@ export default function Header() {
             <li>
               <Link
                 href="/"
-                className={`hover:underline text-lg ${pathname === "/" ? "font-bold" : ""}`}
+                className={`${hoverEffect} text-lg ${pathname === "/" ? "font-bold" : ""}`}
               >
                 Home
               </Link>
@@ -28,7 +31,7 @@ export default function Header() {
             <li>
               <Link
                 href="/about"
-                className={`hover:underline text-lg ${pathname === "/about" ? "font-bold" : ""}`}
+                className={`${hoverEffect} text-lg ${pathname === "/about" ? "font-bold" : ""}`}
               >
                 About
               </Link>
@@ -36,7 +39,7 @@ export default function Header() {
             <li>
               <Link
                 href="/projects"
-                className={`hover:underline text-lg ${pathname === "/projects" ? "font-bold" : ""}`}
+                className={`${hoverEffect} text-lg ${pathname === "/projects" ? "font-bold" : ""}`}
               >
                 Projects
               </Link>
@@ -45,7 +48,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/blog"
-                  className={`hover:underline text-lg ${pathname === "/blog" ? "font-bold" : ""}`}
+                  className={`${hoverEffect} text-lg ${pathname === "/blog" ? "font-bold" : ""}`}
                 >
                   Blog
                 </Link>
