@@ -31,7 +31,7 @@ export default function Home() {
             href="https://github.com/Silver-Sword"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900"
+            className="text-gray-600 hover:text-gray-900 transition-transform duration-300 ease-in-out transform hover:scale-110"
             title="Silver-Sword on GitHub"
           >
             <Github className="h-8 w-8" aria-label="GitHub" />
@@ -40,14 +40,14 @@ export default function Home() {
             href="https://www.linkedin.com/in/chris4/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900"
+            className="text-gray-600 hover:text-gray-900 transition-transform duration-300 ease-in-out transform hover:scale-110"
             title="LinkedIn - Chris Gittings"
           >
             <Linkedin className="h-8 w-8" aria-label="LinkedIn" />
           </a>
           <a
             href="mailto:chrisgittingsucf@gmail.com"
-            className="text-gray-600 hover:text-gray-900"
+            className="text-gray-600 hover:text-gray-900 transition-transform duration-300 ease-in-out transform hover:scale-110"
             title="Email Chris Gittings"
           >
             <Mail className="h-8 w-8" aria-label="Email" />
