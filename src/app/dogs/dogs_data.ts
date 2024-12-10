@@ -4,6 +4,7 @@ export type DogProperties = {
   name: string;
   imageData?: ImageData;
   description: string;
+  lastPet: string;
 };
 
 const IMAGE_URL = "/dog-images";
@@ -11,7 +12,8 @@ const IMAGE_URL = "/dog-images";
 export const DOGS: DogProperties[] = [
   {
     name: "Buddy",
-    description: "Family Dog",
+    description: "Family",
+    lastPet: "June 2023",
     imageData: {
       url: `${IMAGE_URL}/Buddy.jpg`,
       pixelWidth: 3024,
@@ -21,7 +23,8 @@ export const DOGS: DogProperties[] = [
   },
   {
     name: "Bailey",
-    description: "Family Dog",
+    description: "Family",
+    lastPet: "April 2019",
     imageData: {
       url: `${IMAGE_URL}/Bailey.jpg`,
       pixelWidth: 3072,
@@ -31,78 +34,17 @@ export const DOGS: DogProperties[] = [
   },
   {
     name: "Molly",
+    lastPet: "2007",
     description: "Family Dog",
   },
   {
     name: "Ferris",
+    lastPet: "November 2024",
     description: "Cousin's Dog",
   },
   {
-    name: "Mora",
-    description: "Statsig",
-    imageData: {
-      url: `${IMAGE_URL}/Mora.jpg`,
-      pixelWidth: 3024,
-      pixelHeight: 4032,
-      alt: "Mora",
-    },
-  },
-  {
-    name: "Kiwi",
-    description: "Statsig",
-  },
-  {
-    name: "Ollie",
-    description: "Statsig",
-    imageData: {
-      url: `${IMAGE_URL}/Ollie.jpg`,
-      pixelWidth: 3024,
-      pixelHeight: 4032,
-      alt: "Ollie",
-    },
-  },
-  {
-    name: "Ross",
-    description: "Statsig",
-    imageData: {
-      url: `${IMAGE_URL}/Ross.jpg`,
-      pixelWidth: 1200,
-      pixelHeight: 664,
-      alt: "Ross",
-    },
-  },
-  {
-    name: "Bodie",
-    description: "Statsig",
-    imageData: {
-      url: `${IMAGE_URL}/Bodie.jpg`,
-      pixelWidth: 3072,
-      pixelHeight: 4096,
-      alt: "Bodie",
-    },
-  },
-  {
-    name: "Smudge",
-    description: "Statsig",
-    imageData: {
-      url: `${IMAGE_URL}/Smudge.jpg`,
-      pixelWidth: 2048,
-      pixelHeight: 2731,
-      alt: "Smudge",
-    },
-  },
-  {
-    name: "Charlie",
-    description: "Statsig",
-    imageData: {
-      url: `${IMAGE_URL}/Charlie.jpg`,
-      pixelWidth: 400,
-      pixelHeight: 600,
-      alt: "Charlie",
-    },
-  },
-  {
     name: "Olaf",
+    lastPet: "December 2024",
     description: "Family Friend",
     imageData: {
       url: `${IMAGE_URL}/Olaf.jpg`,
@@ -113,6 +55,7 @@ export const DOGS: DogProperties[] = [
   },
   {
     name: "Sven",
+    lastPet: "December 2024",
     description: "Family Friend",
     imageData: {
       url: `${IMAGE_URL}/Sven.jpg`,
@@ -122,7 +65,80 @@ export const DOGS: DogProperties[] = [
     },
   },
   {
+    name: "Mora",
+    lastPet: "August 2024",
+    description: "Statsig",
+    imageData: {
+      url: `${IMAGE_URL}/Mora.jpg`,
+      pixelWidth: 3024,
+      pixelHeight: 4032,
+      alt: "Mora",
+    },
+  },
+  {
+    name: "Kiwi",
+    lastPet: "August 2024",
+    description: "Statsig",
+  },
+  {
+    name: "Ollie",
+    lastPet: "August 2024",
+    description: "Statsig",
+    imageData: {
+      url: `${IMAGE_URL}/Ollie.jpg`,
+      pixelWidth: 3024,
+      pixelHeight: 4032,
+      alt: "Ollie",
+    },
+  },
+  {
+    name: "Ross",
+    lastPet: "July 2024",
+    description: "Statsig",
+    imageData: {
+      url: `${IMAGE_URL}/Ross.jpg`,
+      pixelWidth: 1200,
+      pixelHeight: 664,
+      alt: "Ross",
+    },
+  },
+  {
+    name: "Bodie",
+    lastPet: "July 2024",
+    description: "Statsig",
+    imageData: {
+      url: `${IMAGE_URL}/Bodie.jpg`,
+      pixelWidth: 3072,
+      pixelHeight: 4096,
+      alt: "Bodie",
+    },
+  },
+  {
+    name: "Smudge",
+    lastPet: "July 2024",
+    description: "Statsig",
+    imageData: {
+      url: `${IMAGE_URL}/Smudge.jpg`,
+      pixelWidth: 2048,
+      pixelHeight: 2731,
+      alt: "Smudge",
+    },
+  },
+  {
+    name: "Charlie",
+    lastPet: "June 2024",
+    description: "Statsig",
+    imageData: {
+      url: `${IMAGE_URL}/Charlie.jpg`,
+      pixelWidth: 400,
+      pixelHeight: 600,
+      alt: "Charlie",
+    },
+  },
+
+  {
     name: "Kirby",
+    lastPet: "July 2024",
     description: "Statsig",
     imageData: {
       url: `${IMAGE_URL}/Kirby.jpg`,

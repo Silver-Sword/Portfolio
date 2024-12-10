@@ -8,7 +8,7 @@ import { sortMasonryObjects } from "@/components/ui/masonry/sortMasonryObjects";
 
 const dogs = getDogs();
 export default function Dogs() {
-  const desiredColumnWidth = 200;
+  const desiredColumnWidth = 300;
   const [cardWidth, setCardWidth] = useState(desiredColumnWidth);
   const [numComputedColumns, setComputedNumColumns] = useState(0);
 
