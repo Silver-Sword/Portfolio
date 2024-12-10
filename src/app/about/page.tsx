@@ -128,7 +128,7 @@ export default function About() {
           Science, and I'm excited to apply my skills to real-world problems.
           When I'm not coding, you can find me bouldering, playing video games,
           or diving into a good book.{" "}
-          <Link href="/dogs" className="hover:underline text-gray-400">
+          <Link href="/dogs" className="hover:text-gray-600 text-gray-400">
             I'm also a big fan of dogs.
           </Link>
           <br />
