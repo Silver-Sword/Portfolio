@@ -1,8 +1,9 @@
 import { ProjectProperties } from "@/app/projects/ProjectProperties";
 
 import Image from "next/image";
-import { User, Users, Github, Youtube, FileText, Globe } from "lucide-react";
+import { FileText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import ExternalIcon from "@/components/ui/ExternalIcon";
 
 export function ProjectCard({
   id,
@@ -28,26 +29,19 @@ export function ProjectCard({
           <h3 className="text-xl font-semibold">{title}</h3>{" "}
           <div className="flex space-x-2">
             {links.github && (
-              <a
-                href={links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900 transition-transform hover:scale-110"
+              <ExternalIcon
+                url={links.github}
                 title={`GitHub Repository - ${title}`}
-              >
-                <Github className="h-5 w-5" aria-label="GitHub Repository" />
-              </a>
+                size={40}
+              />
             )}
             {links.youtube && (
-              <a
-                href={links.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900 transition-transform hover:scale-110"
+              <ExternalIcon
+                url={links.youtube}
+                size={40}
                 title={`YouTube Demo - ${title}`}
-              >
-                <Youtube className="h-5 w-5" aria-label="YouTube Demo" />
-              </a>
+                override="youtube"
+              />
             )}
             {links.paper && (
               <a
@@ -61,15 +55,12 @@ export function ProjectCard({
               </a>
             )}
             {links.site && (
-              <a
-                href={links.site}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900 transition-transform hover:scale-110"
+              <ExternalIcon
+                url={links.site}
                 title={`Project Website - ${title}`}
-              >
-                <Globe className="h-5 w-5" aria-label="Project Website" />
-              </a>
+                size={40}
+                override="sharethis"
+              />
             )}
           </div>
         </div>

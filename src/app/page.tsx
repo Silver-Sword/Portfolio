@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Mail } from "lucide-react";
+
 import { ProjectCard } from "@/components/ProjectCard";
 import { BlogCard } from "@/components/BlogCard";
+import ExternalIcon from "@/components/ui/ExternalIcon";
 
 import { getFeaturedProjects } from "./projects/projectPreviews";
 import { getFeaturedPosts } from "./blog/blogPreviews";
@@ -23,35 +24,25 @@ export default function Home() {
           className="rounded-full mx-auto mb-6"
         />
         <h1 className="text-5xl font-bold mb-4">Chris Gittings</h1>
-        <p className="text-2xl text-muted-foreground mb-6">
+        <p className="text-2xl text-muted-foreground mb-4">
           Software Developer
         </p>
         <div className="flex justify-center space-x-4">
-          <a
-            href="https://github.com/Silver-Sword"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900 transition-transform duration-300 ease-in-out transform hover:scale-110"
+          <ExternalIcon
+            url="https://github.com/Silver-Sword"
             title="Silver-Sword on GitHub"
-          >
-            <Github className="h-8 w-8" aria-label="GitHub" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/chris4/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900 transition-transform duration-300 ease-in-out transform hover:scale-110"
+            size={70}
+          />
+          <ExternalIcon
+            url="https://www.linkedin.com/in/chris4/"
             title="LinkedIn - Chris Gittings"
-          >
-            <Linkedin className="h-8 w-8" aria-label="LinkedIn" />
-          </a>
-          <a
-            href="mailto:chrisgittingsucf@gmail.com"
-            className="text-gray-600 hover:text-gray-900 transition-transform duration-300 ease-in-out transform hover:scale-110"
+            size={70}
+          />
+          <ExternalIcon
+            url="mailto:chrisgittingsucf@gmail.com"
             title="Email Chris Gittings"
-          >
-            <Mail className="h-8 w-8" aria-label="Email" />
-          </a>
+            size={70}
+          />
         </div>
       </section>
 
