@@ -26,7 +26,19 @@ export default function FavoriteCard({
       className="text-primary hover:text-primary/80"
       title={`Check out ${name}`}
     >
-      <div className="transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+      <div
+        className="
+        rounded-lg
+        transition-transform
+        duration-300
+        ease-in-out
+        transform
+        hover:scale-[1.02]
+        sm:hover:scale-105
+        hover:shadow-lg
+        hover:object-cover
+        "
+      >
         <MasonryCard columnWidth={columnWidth} imageData={imageData}>
           {/* <div
           className="relative w-full"
