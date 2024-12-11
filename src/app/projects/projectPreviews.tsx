@@ -6,7 +6,7 @@ export const PROJECTS: ProjectProperties[] = [
     title: "Tune Tracer",
     type: "Web App",
     description:
-      "A Google Docs style composition tool. Make music with collaborators in real-time.",
+      "Google Docs style music composition app. Make music with collaborators in real-time.",
     image: "/project-images/tune-tracer-playback.png",
     alt: "Tune Tracer Logo: The music notation for an eighth rest.",
     skills: ["TypeScript", "Firebase", "React", "Mantine", "Google Cloud"],
@@ -22,7 +22,7 @@ export const PROJECTS: ProjectProperties[] = [
     title: "Subliminal",
     type: "Video Game",
     description:
-      "RPG video game blending point and click adventures with fast paced combat.",
+      "Video game blending point and click puzzle adventures with fast paced combat. Solve a murder mystery in the minds of the suspects.",
     image: "/project-images/subliminal-sample-3.png",
     alt: "A screenshot from Subliminal of the main character attacking a slime creature.",
     skills: ["C#", "Unity", "Jira", "Project Management"],
@@ -38,7 +38,7 @@ export const PROJECTS: ProjectProperties[] = [
     title: "Wordlify",
     type: "Web App",
     description:
-      "Compete with your friends in Wordle, online! Guess the word before your friends do.",
+      "Round-robin style social Wordle. Compete with your friends in online Wordle.",
     image: "/project-images/wordlify.gif",
     alt: "An animated gif of the word Wordlify",
     skills: ["TypeScript", "Firebase", "Thunder Client"],
@@ -168,7 +168,7 @@ export const PROJECTS: ProjectProperties[] = [
     title: "GMO Corporations Case Study",
     type: "Research Paper",
     description:
-      "A case study on the business practices of GMO corporations and their impact on the environment in Missouri.",
+      "A case study on the business practices of GMO corporations and their impact on communitites in Missouri.",
     image: "/project-images/gmo-image.jpg",
     alt: "A DNA helix composed of fruits and vegetables",
     skills: ["Python", "LaTeX", "Research"],
@@ -183,7 +183,8 @@ export const PROJECTS: ProjectProperties[] = [
     id: 7,
     title: "Alchemy Game",
     type: "Video Game",
-    description: "Mix items and create increasingly complex entities.",
+    description:
+      "A text-based video game focused on mixing elements. Combine items and create increasingly complex entities.",
     image: "/project-images/elements.jpg",
     alt: "Four tiles with the elements of fire, water, earth, and air surrounding a lotus tile on a wooden surface.",
     skills: ["Java", "Eclipse", "Github"],
