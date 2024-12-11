@@ -86,6 +86,12 @@ export const DOGS: DogProperties[] = [
     name: "Kiwi",
     lastPet: "August 2024",
     description: "Statsig",
+    imageData: {
+      url: `${IMAGE_URL}/Kiwi.jpg`,
+      pixelWidth: 2048,
+      pixelHeight: 1145,
+      alt: "Kiwi",
+    },
   },
   {
     name: "Ollie",
