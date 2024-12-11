@@ -38,7 +38,7 @@ export const PROJECTS: ProjectProperties[] = [
     title: "Wordlify",
     type: "Web App",
     description:
-      "Round-robin style social Wordle. Compete with your friends in online Wordle.",
+      "Social Wordle party game. Compete with your friends in online Wordle.",
     image: "/project-images/wordlify.gif",
     alt: "An animated gif of the word Wordlify",
     skills: ["TypeScript", "Firebase", "Thunder Client"],

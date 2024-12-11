@@ -66,7 +66,7 @@ export function ProjectCard({
         </div>
 
         <div className="text-muted-foreground mb-4">
-          <Badge variant="outline">{type.trim()}</Badge> | {description}
+          <Badge variant="outline">{type.trim()}</Badge> {description}
         </div>
         <div className="flex flex-wrap gap-2">
           {skills.map((skill, index) => (
