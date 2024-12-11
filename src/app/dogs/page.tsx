@@ -14,6 +14,7 @@ export default function Dogs() {
 
   return (
     <div>
+      <title>Pets Achieved</title>
       <h1 className="text-4xl font-bold mb-8 text-center">
         Collection of My Furry Friends
       </h1>

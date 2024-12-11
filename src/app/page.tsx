@@ -15,6 +15,7 @@ const blogPosts = getFeaturedPosts();
 export default function Home() {
   return (
     <div className="space-y-16">
+      <title>Chris Gittings</title>
       <section id="home" className="text-center pt-16">
         <Image
           src="/sleeping dragon.png"
