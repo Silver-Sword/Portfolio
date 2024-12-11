@@ -16,15 +16,15 @@ export function ProjectCard({
   links,
 }: ProjectProperties) {
   return (
-    <div className="border rounded-lg overflow-hidden shadow-lg">
+    <div className="mb-5">
       <Image
         src={image}
         alt={title}
         width={300}
         height={200}
-        className="w-full h-48 object-cover"
+        className="w-full h-60 object-cover rounded-lg shadow-sm"
       />
-      <div className="p-4">
+      <div className="mt-2">
         <div className="flex justify-between items-center mb-2">
           <h3 className="text-xl font-semibold">{title}</h3>{" "}
           <div className="flex space-x-2">
