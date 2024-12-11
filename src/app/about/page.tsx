@@ -109,6 +109,7 @@ export default function About() {
   return (
     <div className="space-y-12">
       <section>
+        <title>About - Chris Gittings</title>
         <h1 className="text-4xl font-bold mb-8 text-center">About</h1>
         <h2 className="text-3xl font-semibold mb-4">About Me</h2>
         <p className="text-lg">
