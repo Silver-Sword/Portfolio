@@ -37,11 +37,7 @@ export const DOGS: DogProperties[] = [
     lastPet: "2007",
     description: "Family Dog",
   },
-  {
-    name: "Ferris",
-    lastPet: "November 2024",
-    description: "Cousin's Dog",
-  },
+
   {
     name: "Olaf",
     lastPet: "December 2024",
@@ -62,6 +58,17 @@ export const DOGS: DogProperties[] = [
       pixelWidth: 3024,
       pixelHeight: 4032,
       alt: "Sven",
+    },
+  },
+  {
+    name: "Ferris",
+    lastPet: "November 2024",
+    description: "Cousin",
+    imageData: {
+      url: `${IMAGE_URL}/Ferris.png`,
+      pixelWidth: 875,
+      pixelHeight: 874,
+      alt: "Ferris",
     },
   },
   {
