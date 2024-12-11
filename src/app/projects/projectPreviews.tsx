@@ -153,7 +153,7 @@ export const PROJECTS: ProjectProperties[] = [
     type: "Research Paper",
     description:
       "A research paper on Noise Resistance in Quantum Key Distribution Protocols, a analysis of error in quantum computing communication.",
-    image: "/project-images/qkd-image.png",
+    image: "/project-images/qkd3.png",
     alt: "A diagram of a quantum key distribution protocol.",
     skills: ["Python", "Research", "Quantum Computing"],
     isTeamProject: false,
