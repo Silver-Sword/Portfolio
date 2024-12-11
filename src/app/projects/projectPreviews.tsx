@@ -22,7 +22,7 @@ export const PROJECTS: ProjectProperties[] = [
     title: "Subliminal",
     type: "Video Game",
     description:
-      "Video game blending point and click puzzle adventures with fast paced combat. Solve a murder mystery in the minds of the suspects.",
+      "Video game blending point and click puzzles with fast paced combat. Solve a murder mystery in the minds of the suspects.",
     image: "/project-images/subliminal-sample-3.png",
     alt: "A screenshot from Subliminal of the main character attacking a slime creature.",
     skills: ["C#", "Unity", "Jira", "Project Management"],
