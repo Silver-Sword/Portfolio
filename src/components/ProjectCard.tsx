@@ -1,7 +1,6 @@
-import { ProjectProperties } from "@/app/projects/ProjectProperties";
-
 import Image from "next/image";
-import { FileText } from "lucide-react";
+
+import { ProjectProperties } from "@/app/projects/ProjectProperties";
 import { Badge } from "@/components/ui/badge";
 import ExternalIcon from "@/components/ui/ExternalIcon";
 
@@ -44,15 +43,12 @@ export function ProjectCard({
               />
             )}
             {links.paper && (
-              <a
-                href={links.paper}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900 transition-transform hover:scale-110"
+              <ExternalIcon
+                url={links.paper}
                 title={`Research Paper - ${title}`}
-              >
-                <FileText className="h-5 w-5" aria-label="Research Paper" />
-              </a>
+                size={40}
+                override="paper"
+              />
             )}
             {links.site && (
               <ExternalIcon
