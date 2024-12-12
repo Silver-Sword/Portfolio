@@ -39,30 +39,32 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 bg-background text-foreground shadow-md z-10">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center">
+      <div className="py-4 flex items-center">
+        <div className="pl-5">
           <Link href="/" className="flex items-center">
             <span className="text-lg font-bold">Chris G.</span>
           </Link>
         </div>
 
         {/* Desktop navigation */}
-        <nav className="hidden md:block flex-grow">
-          <ul className="flex justify-center space-x-8">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`${hoverEffect} text-lg ${
-                    pathname === item.href ? "font-bold" : ""
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="absolute flex items-center justify-center h-full w-full">
+          <nav className="hidden md:block">
+            <ul className="flex space-x-8">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={`${hoverEffect} text-lg ${
+                      pathname === item.href ? "font-bold" : ""
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
 
         {/* Mobile menu button */}
         <div className="md:hidden relative" ref={dropdownRef}>
