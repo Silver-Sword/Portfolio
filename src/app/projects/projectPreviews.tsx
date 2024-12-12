@@ -46,7 +46,7 @@ export const PROJECTS: ProjectProperties[] = [
     isFeatured: true,
     links: {
       github: "https://github.com/arundeegutla/shellhacks2024",
-      site: "shellhacks24.web.app/",
+      site: "https://shellhacks24.web.app/",
     },
   },
   {
@@ -128,7 +128,6 @@ export const PROJECTS: ProjectProperties[] = [
     isFeatured: false,
     links: {
       github: "https://github.com/Silver-Sword/Silver-Sword.github.io",
-      site: "https://silver-sword.github.io/",
     },
   },
   {
