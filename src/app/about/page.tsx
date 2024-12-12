@@ -114,9 +114,9 @@ export default function About() {
         <h2 className="text-3xl font-semibold mb-4">About Me</h2>
         <p className="text-lg">
           Hey there! Welcome to my Portfolio! I'm a software engineer with a
-          love problem solving and learning. I specialize in backend development
-          and applications of algorithms and data structures. I also have a
-          blossoming love for indie game development.
+          love of problem solving and learning. I specialize in backend
+          development and applications of algorithms and data structures. I also
+          have a passion for indie game development.
           <br />
           <br />
           As a software engineer, I've interned at Statsig and Lockheed Martin.
