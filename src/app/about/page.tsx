@@ -108,11 +108,11 @@ export default function About() {
 
   return (
     <div className="space-y-12">
-      <section>
+      <section id="about">
         <title>About - Chris Gittings</title>
-        <h1 className="text-4xl font-bold mb-8 text-center">About</h1>
-        <h2 className="text-3xl font-semibold mb-4">About Me</h2>
-        <p className="text-lg">
+        <h1 className="text-4xl font-semibold mb-8 text-center">About</h1>
+        <h2 className="text-3xl font-medium mb-4">About Me</h2>
+        <p className="text-lg font-normal">
           Hey there! Welcome to my Portfolio! I'm a software engineer with a
           love of problem solving and learning. I specialize in backend
           development and applications of algorithms and data structures. I also
@@ -132,13 +132,11 @@ export default function About() {
           <Link href="/dogs" className="hover:text-gray-600 text-gray-400">
             I'm also a big fan of dogs.
           </Link>
-          <br />
-          <br />
         </p>
       </section>
 
-      <section>
-        <h2 className="text-3xl font-semibold mb-4">Skills</h2>
+      <section id="skills">
+        <h2 className="text-3xl font-medium mb-4">Skills</h2>
         <div className="space-y-4">
           {Object.entries(skills).map(([category, items]) => (
             <div key={category}>
@@ -157,8 +155,8 @@ export default function About() {
         </div>
       </section>
 
-      <section>
-        <h2 className="text-3xl font-semibold mb-4">Work Experience</h2>
+      <section id="experience">
+        <h2 className="text-3xl font-medium mb-4">Work Experience</h2>
         <Timeline>
           {workExperience.map((job, index) => (
             <TimelineItem key={index}>

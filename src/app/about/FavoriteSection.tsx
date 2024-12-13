@@ -13,7 +13,7 @@ export default function FavoriteSection() {
 
   return (
     <section className="container mx-auto px-4">
-      <h2 className="text-3xl font-semibold mb-2">My Favorites</h2>
+      <h2 className="text-3xl font-medium mb-2">My Favorites</h2>
       <p className="text-md mb-4 text-muted-foreground">
         A collection of some of my favorite things
       </p>
